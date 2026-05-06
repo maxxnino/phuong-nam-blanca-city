@@ -411,7 +411,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto;
             gap: 14px;
         }
@@ -421,24 +421,23 @@
             border-radius: 8px;
             cursor: pointer;
             position: relative;
+            padding-bottom: 56.25%;
         }
 
-        .gallery-item:first-child {
+        /* .gallery-item:first-child {
             grid-column: span 2;
-            grid-row: span 2;
-        }
+            grid-row: span 1;
+            padding-bottom: 56.25%;
+        } */
 
         .gallery-item img {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            min-height: 200px;
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
-        }
-
-        .gallery-item:first-child img {
-            min-height: 460px;
         }
 
         .gallery-item:hover img {
@@ -962,34 +961,34 @@
     <section id="hero">
         <div class="hero-badge">Khu Đô Thị Du Lịch Biển · Vũng Tàu</div>
         <h1 class="hero-title">Biến Mỗi Chuyến Đi Vũng Tàu —<br />Thành Một <em>Tài Sản Sinh Lời</em></h1>
-        <p class="hero-sub">Trước đây, Vũng Tàu chỉ là điểm đến 1–2 ngày. Blanca City đang thay đổi điều đó, với hệ sinh
-            thái nghỉ dưỡng, giải trí và thương mại trọn vẹn. Khách ở lại lâu hơn. Khai thác tốt hơn. Tài sản tạo dòng
-            tiền đều mỗi tháng.</p>
+        <p class="hero-sub">Trước đây, Vũng Tàu chỉ là điểm đến ngắn ngày. Blanca City đang thay đổi điều đó, với hệ
+            sinh thái nghỉ dưỡng, giải trí và thương mại trọn vẹn. Khách ở lại lâu hơn. Khai thác tốt hơn. Tài sản tạo
+            dòng tiền đều hơn mỗi tháng.</p>
         <div class="hero-actions">
             <a href="#contact" class="btn-primary">📅 Đăng Ký Tham Quan Nhà Mẫu</a>
-            <a href="#benefits" class="btn-secondary">Khám Phá Dự Án</a>
+            <a href="#about" class="btn-secondary">Khám Phá Dự Án</a>
         </div>
     </section>
 
     <!-- STATS -->
-    <div id="stats">
-        <!-- <div class="stat-item">
+    <!-- <div id="stats"> -->
+    <!-- <div class="stat-item">
             <div class="stat-num">>25 Triệu</div>
             <div class="stat-label">Thu Nhập Cho Thuê / Tháng (dự kiến theo thị trường khai thác tương tự)</div>
         </div> -->
-        <div class="stat-item">
+    <!-- <div class="stat-item">
             <div class="stat-num">2000+</div>
             <div class="stat-label">Căn Hộ Ven Biển Sở Hữu Lâu Dài</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">~1.5 Giờ</div>
             <div class="stat-label">Kết Nối TP.HCM Qua Cao Tốc</div>
-        </div>
-        <!-- <div class="stat-item">
+        </div> -->
+    <!-- <div class="stat-item">
             <div class="stat-num">Quốc Tế</div>
             <div class="stat-label">Sân Bay Long Thành Sắp Hoạt Động</div>
         </div> -->
-    </div>
+    <!-- </div> -->
 
     <!-- ABOUT -->
     <section id="about">
@@ -1003,13 +1002,13 @@
                     <div style="padding: 2rem 0; font-family: sans-serif;">
                         <p
                             style="font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #6b8090; margin: 0 0 10px;">
-                            Mô Hình Kinh Doanh</p>
+                            Giới Thiệu Blanca City</p>
                         <h2 style="font-size: 22px; font-weight: 600; color: #0d1b26; margin: 0 0 8px;">Blanca City –
                             Giữ Khách Ở Lại Lâu Hơn</h2>
                         <p
                             style="font-size: 15px; color: #6b8090; line-height: 1.75; margin: 0 0 1.5rem; max-width: 600px;">
-                            Blanca City không được phát triển chỉ để ở, mà để giải quyết một vấn đề rất rõ: Vũng Tàu
-                            đông khách, nhưng khách không ở lại lâu. Blanca City được thiết kế để thay đổi điều đó.
+                            Blanca City không chỉ để ở, mà để giải quyết một vấn đề rất rõ: Vũng Tàu đông khách, nhưng
+                            khách không ở lại lâu. Blanca City được thiết kế để thay đổi điều đó.
                         </p>
                         <div style="border-left: 3px solid #d1d5db; padding-left: 1.25rem; margin: 0 0 1.5rem;">
                             <p style="font-size: 15px; font-weight: 600; color: #0d1b26; margin: 0 0 12px;">Một ngày tại
@@ -1075,9 +1074,9 @@
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">🌊</div>
                     <div class="benefit-title">Trải Nghiệm Không Đứt Đoạn</div>
-                    <div class="benefit-desc">Blanca City được thiết kế để khách không cần rời đi trong ngày. Ban ngày
-                        có chỗ vui chơi, buổi tối vẫn còn hoạt động để tiếp tục trải nghiệm, không bị "hết chỗ đi" sau
-                        6–7 giờ tối như trước đây.<br /><br />👉 Khách ở lại thêm 1 đêm → doanh thu tăng thêm 1 ngày
+                    <div class="benefit-desc">Blanca City được thiết kế để khách hàng ở lại lâu hơn. Ban ngày có chỗ vui
+                        chơi, buổi tối vẫn còn hoạt động để tiếp tục trải nghiệm, không bị "hết chỗ đi" sau 6–7 giờ tối
+                        như trước đây.<br /><br />👉 Khách ở lại thêm 1 đêm → doanh thu tăng thêm 1 ngày
                     </div>
                 </div>
 
@@ -1153,6 +1152,14 @@
                     <img src="images/nhabep.jpg" alt="Bếp và phòng khách" />
                     <div class="gallery-overlay"><span>Không Gian Bếp</span></div>
                 </div>
+                <div class="gallery-item">
+                    <img src="images/Bedroom2.jpg" alt="Nội thất căn hộ" />
+                    <div class="gallery-overlay"><span>Nội Thất Căn Hộ</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/nhabep2.jpg" alt="Bếp và phòng khách" />
+                    <div class="gallery-overlay"><span>Không Gian Bếp</span></div>
+                </div>
             </div>
             <!-- <p class="gallery-note">* Hình ảnh minh họa — ảnh thực tế sẽ được cập nhật sớm</p> -->
         </div>
@@ -1173,10 +1180,10 @@
                 <div class="video-card reveal">
                     <div class="video-embed">
                         <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/feEpdESzY3Y?si=XP7tEWpE_hE2pP1c"
-                            title="Giới thiệu Blanca City"
+                            src="https://www.youtube.com/embed/X0qUkP5_baU?si=JDO95Wp1Br5MQ8fm"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Giới thiệu Blanca City"
                             allowfullscreen loading="lazy"></iframe> -->
                     </div>
@@ -1189,36 +1196,39 @@
                 <div class="video-card reveal">
                     <div class="video-embed">
                         <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/9YUcXoUNKLY?si=Emyw9H_YBpCmKUw_"
-                            title="Giới Thiệu Beacon Tower" frameborder="0"
+                            src="https://www.youtube.com/embed/lbVNLQzhltk?si=PJVeZ9-B7tgrK3YN"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tiện ích Blanca City"
                             allowfullscreen loading="lazy"></iframe> -->
                     </div>
                     <div class="video-info">
-                        <div class="video-title">Giới Thiệu Beacon Tower</div>
-                        <div class="video-desc-text">Căn hộ sở hữu lâu dài với nhiều tiện ích đẳng cấp</div>
+                        <div class="video-title">Tiến độ Blanca City 04/2026</div>
+                        <div class="video-desc-text">Flycam trên cao tiến độ dự án tháng 4 năm 2026</div>
                     </div>
                 </div>
                 <!-- VIDEO 3 -->
-                <!-- <div class="video-card reveal">
+                <div class="video-card reveal">
                     <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Căn hộ mẫu Blanca City"
-                            allowfullscreen loading="lazy"></iframe>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/F98wa-bKdqA?si=se9DcZ-2uVcuDt0F"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <div class="video-title">Tham Quan Căn Hộ Mẫu</div>
-                        <div class="video-desc-text">Walk-through thực tế các loại căn hộ studio, 1PN và 2PN</div>
+                        <div class="video-title">Roadshow quảng bá Blanca City</div>
+                        <div class="video-desc-text">Chuỗi sự kiên 10 ngày roadshow tại Vũng Tàu</div>
                     </div>
-                </div> -->
+                </div>
             </div>
-            <!-- <div style="text-align:center; margin-top: 20px;"> -->
-            <!-- THAY LINK KÊNH YOUTUBE THỰC TẾ -->
-            <!-- <a href="https://www.youtube.com/@blancacity" target="_blank" class="video-more-link">
+            <div style="text-align:center; margin-top: 20px;">
+                <!-- THAY LINK KÊNH YOUTUBE THỰC TẾ -->
+                <a href="https://www.youtube.com/@blanca-city-vt" target="_blank" class="video-more-link">
                     ▶&nbsp; Xem thêm video trên kênh YouTube →
                 </a>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -1247,7 +1257,7 @@
                             <div class="loc-dot">🎓</div> Trường quốc tế cấp 1–3 & Bệnh viện Mặt Trời liên kết quốc tế
                         </li>
                         <li>
-                            <div class="loc-dot">🚗</div> 120 phút từ TP.HCM qua cao tốc Biên Hòa – Vũng Tàu
+                            <div class="loc-dot">🚗</div> 90 phút từ TP.HCM qua cao tốc Biên Hòa – Vũng Tàu
                         </li>
                     </ul>
                 </div>
@@ -1280,7 +1290,7 @@
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
                 <div class="reveal"
                     style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:32px 28px;">
-                    <div style="font-size:2rem;margin-bottom:16px;">📉</div>
+                    <div style="font-size:2rem;margin-bottom:16px;">💵</div>
                     <div style="font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:10px;">Giá Mở Bán Sớm —
                         Tốt Nhất</div>
                     <div style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;">Hiện tại đang ở giai
