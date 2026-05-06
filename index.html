@@ -65,10 +65,11 @@
 
         .nav-logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--white);
             letter-spacing: 2px;
+            text-decoration: none;
         }
 
         .nav-logo span {
@@ -413,7 +414,7 @@
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto;
-            gap: 14px;
+            gap: 7px;
         }
 
         .gallery-item {
@@ -953,7 +954,7 @@
 
     <!-- NAV -->
     <nav>
-        <div class="nav-logo">BLANCA<span> CITY</span></div>
+        <a href="#hero" class="nav-logo">BLANCA<span> CITY</span></a>
         <a href="#contact" class="nav-cta">Đặt Lịch Tham Quan</a>
     </nav>
 
@@ -1061,6 +1062,70 @@
         </div>
     </section>
 
+    <!-- VIDEOS -->
+    <section id="videos">
+        <div class="container">
+            <div class="video-header reveal">
+                <p class="section-label">Video Dự Án</p>
+                <h2 class="section-title" style="color:white;">Trải Nghiệm <em style="color:var(--gold);">Blanca
+                        City</em></h2>
+                <p class="section-desc">Xem các video giới thiệu dự án, tiện ích và không gian sống thực tế</p>
+            </div>
+            <div class="video-grid">
+                <!-- VIDEO 1: THAY src BẰNG LINK YOUTUBE THỰC TẾ -->
+                <!-- Ví dụ: src="https://www.youtube.com/embed/VIDEO_ID_1" -->
+                <div class="video-card reveal">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/X0qUkP5_baU?si=JDO95Wp1Br5MQ8fm"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Giới thiệu Blanca City"
+                            allowfullscreen loading="lazy"></iframe> -->
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Tổng Quan Dự Án Blanca City</div>
+                        <div class="video-desc-text">Khám phá toàn cảnh khu đô thị nghỉ dưỡng ven biển đẳng cấp</div>
+                    </div>
+                </div>
+                <!-- VIDEO 2 -->
+                <div class="video-card reveal">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/lbVNLQzhltk?si=PJVeZ9-B7tgrK3YN"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tiện ích Blanca City"
+                            allowfullscreen loading="lazy"></iframe> -->
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Tiến độ Blanca City 04/2026</div>
+                        <div class="video-desc-text">Flycam trên cao tiến độ dự án tháng 4 năm 2026</div>
+                    </div>
+                </div>
+                <!-- VIDEO 3 -->
+                <div class="video-card reveal">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/F98wa-bKdqA?si=se9DcZ-2uVcuDt0F"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Roadshow quảng bá Blanca City</div>
+                        <div class="video-desc-text">Chuỗi sự kiên 10 ngày roadshow tại Vũng Tàu</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: 20px;">
+                <!-- THAY LINK KÊNH YOUTUBE THỰC TẾ -->
+                <a href="https://www.youtube.com/@blanca-city-vt" target="_blank" class="video-more-link">
+                    ▶&nbsp; Xem thêm video trên kênh YouTube →
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- BENEFITS -->
     <section id="benefits">
         <div class="container">
@@ -1162,73 +1227,6 @@
                 </div>
             </div>
             <!-- <p class="gallery-note">* Hình ảnh minh họa — ảnh thực tế sẽ được cập nhật sớm</p> -->
-        </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos">
-        <div class="container">
-            <div class="video-header reveal">
-                <p class="section-label">Video Dự Án</p>
-                <h2 class="section-title" style="color:white;">Trải Nghiệm <em style="color:var(--gold);">Blanca
-                        City</em></h2>
-                <p class="section-desc">Xem các video giới thiệu dự án, tiện ích và không gian sống thực tế</p>
-            </div>
-            <div class="video-grid">
-                <!-- VIDEO 1: THAY src BẰNG LINK YOUTUBE THỰC TẾ -->
-                <!-- Ví dụ: src="https://www.youtube.com/embed/VIDEO_ID_1" -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/X0qUkP5_baU?si=JDO95Wp1Br5MQ8fm"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Giới thiệu Blanca City"
-                            allowfullscreen loading="lazy"></iframe> -->
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Tổng Quan Dự Án Blanca City</div>
-                        <div class="video-desc-text">Khám phá toàn cảnh khu đô thị nghỉ dưỡng ven biển đẳng cấp</div>
-                    </div>
-                </div>
-                <!-- VIDEO 2 -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/lbVNLQzhltk?si=PJVeZ9-B7tgrK3YN"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tiện ích Blanca City"
-                            allowfullscreen loading="lazy"></iframe> -->
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Tiến độ Blanca City 04/2026</div>
-                        <div class="video-desc-text">Flycam trên cao tiến độ dự án tháng 4 năm 2026</div>
-                    </div>
-                </div>
-                <!-- VIDEO 3 -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/F98wa-bKdqA?si=se9DcZ-2uVcuDt0F"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Roadshow quảng bá Blanca City</div>
-                        <div class="video-desc-text">Chuỗi sự kiên 10 ngày roadshow tại Vũng Tàu</div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top: 20px;">
-                <!-- THAY LINK KÊNH YOUTUBE THỰC TẾ -->
-                <a href="https://www.youtube.com/@blanca-city-vt" target="_blank" class="video-more-link">
-                    ▶&nbsp; Xem thêm video trên kênh YouTube →
-                </a>
-            </div>
         </div>
     </section>
 
