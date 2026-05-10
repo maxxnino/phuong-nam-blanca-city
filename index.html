@@ -483,6 +483,69 @@
             text-align: center;
         }
 
+        .press-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 18px 22px;
+            text-decoration: none;
+            border: 1px solid rgba(11, 79, 108, 0.08);
+            transition: all 0.2s;
+            box-shadow: 0 2px 10px rgba(11, 79, 108, 0.04);
+        }
+
+        .press-item:hover {
+            transform: translateX(4px);
+            border-color: var(--sky);
+            box-shadow: 0 4px 20px rgba(11, 79, 108, 0.1);
+        }
+
+        .press-source {
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: var(--ocean);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .press-title {
+            flex: 1;
+            font-size: 0.92rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .press-arrow {
+            flex-shrink: 0;
+            color: var(--sky);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .press-item:hover .press-arrow {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 480px) {
+            .press-item {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .press-arrow {
+                display: none;
+            }
+        }
+
         /* ── VIDEO ── */
         #videos {
             background: var(--dark);
@@ -1014,14 +1077,13 @@
                                     style="display:flex; align-items:center; gap:12px; background:#f1f5f9; border-radius:8px; padding:10px 14px;">
                                     <span
                                         style="font-size:13px; font-weight:600; color:#6b8090; min-width:42px;">Trưa</span>
-                                    <span style="font-size:15px; color:#0d1b26;">Vui chơi, giải trí</span>
+                                    <span style="font-size:15px; color:#0d1b26;">Công viên nước, thể thao</span>
                                 </div>
                                 <div
                                     style="display:flex; align-items:center; gap:12px; background:#f1f5f9; border-radius:8px; padding:10px 14px;">
                                     <span
                                         style="font-size:13px; font-weight:600; color:#6b8090; min-width:42px;">Tối</span>
-                                    <span style="font-size:15px; color:#0d1b26;">Ẩm thực, phố đi bộ, hoạt động
-                                        đêm</span>
+                                    <span style="font-size:15px; color:#0d1b26;">Ẩm thực, lễ hội, pháo hoa</span>
                                 </div>
                             </div>
                         </div>
@@ -1216,6 +1278,62 @@
                 </div>
             </div>
             <!-- <p class="gallery-note">* Hình ảnh minh họa — ảnh thực tế sẽ được cập nhật sớm</p> -->
+        </div>
+    </section>
+    <!-- PRESS -->
+    <section id="press" style="background:var(--foam); padding:80px 24px;">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:48px;" class="reveal">
+                <p class="section-label">Truyền Thông Nói Gì</p>
+                <h2 class="section-title">Blanca City <em>Trên Báo Chí</em></h2>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:14px;">
+
+                <!-- BÀI 1 – THAY href VÀ NỘI DUNG -->
+                <a href="https://tuoitre.vn/tim-kiem.htm?keywords=blanca%20city" target="_blank" rel="noopener"
+                    class="press-item reveal">
+                    <span class="press-source">Dân Trí</span>
+                    <span class="press-title">Blanca City – Khu đô thị du lịch biển đầu tiên tại Vũng Tàu thu hút hàng
+                        nghìn nhà đầu tư</span>
+                    <span class="press-arrow">→</span>
+                </a>
+
+                <!-- BÀI 2 -->
+                <a href="https://vnexpress.net/tag/blanca-city-1783673" target="_blank" rel="noopener"
+                    class="press-item reveal">
+                    <span class="press-source">VnExpress</span>
+                    <span class="press-title">Sun Group ra mắt tổ hợp nghỉ dưỡng Blanca City, thay đổi diện mạo du lịch
+                        Vũng Tàu</span>
+                    <span class="press-arrow">→</span>
+                </a>
+
+                <!-- BÀI 3 -->
+                <a href="https://cafef.vn/blanca-city.html" target="_blank" rel="noopener" class="press-item reveal">
+                    <span class="press-source">CafeF</span>
+                    <span class="press-title">Blanca City – Cơ hội đầu tư căn hộ ven biển sinh lời bền vững tại Vũng
+                        Tàu</span>
+                    <span class="press-arrow">→</span>
+                </a>
+
+                <!-- BÀI 4 -->
+                <a href="https://vietnamnet.vn/tim-kiem?q=blanca+city" target="_blank" rel="noopener"
+                    class="press-item reveal">
+                    <span class="press-source">Việt Nam Net</span>
+                    <span class="press-title">Vũng Tàu lên tầm quốc tế với dự án nghỉ dưỡng Blanca City của Sun
+                        Group</span>
+                    <span class="press-arrow">→</span>
+                </a>
+
+                <!-- BÀI 5 -->
+                <a href="https://sungroup.com.vn/tin-tuc/sun-group-ra-mat-thanh-pho-trang-ben-bo-dai-duong-blanca-city-vung-tau-7917"
+                    target="_blank" rel="noopener" class="press-item reveal">
+                    <span class="press-source">Sun Group</span>
+                    <span class="press-title">Sun Group ra mắt “Thành phố trắng bên bờ đại dương” Blanca City, Vũng
+                        Tàu</span>
+                    <span class="press-arrow">→</span>
+                </a>
+
+            </div>
         </div>
     </section>
 
