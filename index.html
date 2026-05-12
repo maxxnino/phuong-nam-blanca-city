@@ -2,1503 +2,496 @@
 <html lang="vi">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-456JF2CB64"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-456JF2CB64');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blanca City – Khu Đô Thị Du Lịch Biển Vũng Tàu</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            /* --ocean: #0b4f6c; */
-            --ocean: oklch(38.6% 0.063 188.416);
-            /* --sky: #1a8cb5; */
-            --sky: oklch(50% 0.134 242.749);
-            --sky-light: oklch(82.8% 0.111 230.318);
-            --foam: #e8f6fc;
-            /* --sand: #f5ede0; */
-            --sand: oklch(98% 0.016 73.684);
-            /* --gold: #c9a84c; */
-            --gold: oklch(79.5% 0.184 86.047);
-            --white: #ffffff;
-            --dark: #0d1b26;
-            /* --text: #2c3e50; */
-            --text: oklch(27.9% 0.041 260.031);
-            --muted: #6b8090;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Be Vietnam Pro', sans-serif;
-            color: var(--text);
-            background: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* ── NAV ── */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 18px 48px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* background: rgba(11, 79, 108, 0.85); */
-            background: var(--ocean);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--white);
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-        .nav-logo span {
-            color: var(--gold);
-        }
-
-        .nav-cta {
-            background: var(--gold);
-            color: var(--dark);
-            border: none;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-family: 'Be Vietnam Pro', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.15s;
-        }
-
-        .nav-cta:hover {
-            background: #e0bc5a;
-            transform: translateY(-1px);
-        }
-
-        /* ── HERO ── */
-        #hero {
-            min-height: 100vh;
-            background:
-                linear-gradient(to bottom, rgba(11, 79, 108, 0.72) 0%, rgba(11, 79, 108, 0.70) 50%, rgba(245, 237, 224, 0.50) 100%),
-                url('images/hero1920.jpg') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 24px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: linear-gradient(to top, var(--white), transparent);
-        }
-
-        .hero-badge {
-            display: inline-block;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            padding: 6px 18px;
-            border-radius: 2px;
-            margin-bottom: 28px;
-            animation: fadeUp 0.8s ease both;
-        }
-
-        .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3rem, 8vw, 6.5rem);
-            font-weight: 600;
-            line-height: 1.05;
-            color: var(--white);
-            margin-bottom: 12px;
-            animation: fadeUp 0.9s 0.1s ease both;
-        }
-
-        .hero-title em {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        .hero-sub {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 300;
-            max-width: 560px;
-            line-height: 1.7;
-            margin: 0 auto 48px;
-            animation: fadeUp 1s 0.2s ease both;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-            animation: fadeUp 1s 0.3s ease both;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--dark);
-            padding: 16px 36px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            transition: all 0.2s;
-            border: 2px solid var(--gold);
-        }
-
-        .btn-primary:hover {
-            background: #e0bc5a;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            padding: 16px 36px;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-decoration: none;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            transition: all 0.2s;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--white);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* ── WAVE DIVIDER ── */
-        .wave-divider {
-            display: block;
-            width: 100%;
-            margin-top: -2px;
-            line-height: 0;
-        }
-
-        /* ── STATS BAR ── */
-        #stats {
-            background: var(--ocean);
-            padding: 40px 48px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 12px 48px;
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-num {
-            /* font-family: 'Cormorant Garamond', serif; */
-            font-family: 'Be Vietnam Pro', sans-serif;
-            font-size: 2.4rem;
-            font-weight: 600;
-            color: var(--gold);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.65);
-            margin-top: 6px;
-            letter-spacing: 0.5px;
-        }
-
-        /* ── SECTION SHARED ── */
-        section {
-            padding: 96px 24px;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--sky);
-            margin-bottom: 14px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 600;
-            line-height: 1.15;
-            color: var(--dark);
-            margin-bottom: 20px;
-        }
-
-        .section-title em {
-            color: var(--sky);
-            font-style: italic;
-        }
-
-        .section-desc {
-            font-size: 1rem;
-            color: var(--muted);
-            line-height: 1.8;
-            max-width: 560px;
-        }
-
-        /* ── ABOUT ── */
-        #about {
-            background: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 72px;
-            align-items: center;
-        }
-
-        .about-img {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .about-img img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .about-img::before {
-            content: '';
-            position: absolute;
-            top: -16px;
-            left: -16px;
-            width: 60%;
-            height: 60%;
-            border: 3px solid var(--gold);
-            border-radius: 6px;
-            z-index: -1;
-        }
-
-        .about-img::after {
-            content: '';
-            position: absolute;
-            bottom: -16px;
-            right: -16px;
-            width: 40%;
-            height: 40%;
-            background: var(--foam);
-            border-radius: 6px;
-            z-index: -1;
-        }
-
-        /* ── BENEFITS ── */
-        #benefits {
-            background: var(--foam);
-        }
-
-        .benefits-header {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-
-        .benefits-header .section-desc {
-            margin: 0 auto;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
-
-        .benefit-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 36px 28px;
-            border-bottom: 3px solid transparent;
-            transition: all 0.25s;
-            box-shadow: 0 2px 16px rgba(11, 79, 108, 0.06);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-4px);
-            border-bottom-color: var(--gold);
-            box-shadow: 0 12px 40px rgba(11, 79, 108, 0.12);
-        }
-
-        .benefit-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--ocean), var(--sky));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-
-        .benefit-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .benefit-desc {
-            font-size: 0.9rem;
-            color: var(--muted);
-            line-height: 1.75;
-        }
-
-        /* ── GALLERY ── */
-        #gallery {
-            background: var(--white);
-        }
-
-        .gallery-header {
-            margin-bottom: 48px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: auto auto;
-            gap: 7px;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            cursor: pointer;
-            position: relative;
-            padding-bottom: 56.25%;
-        }
-
-        /* .gallery-item:first-child {
-            grid-column: span 2;
-            grid-row: span 1;
-            padding-bottom: 56.25%;
-        } */
-
-        .gallery-item img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(11, 79, 108, 0.6), transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            display: flex;
-            align-items: flex-end;
-            padding: 18px;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            color: var(--white);
-            font-size: 0.82rem;
-            font-weight: 500;
-        }
-
-        .gallery-note {
-            margin-top: 16px;
-            font-size: 0.82rem;
-            color: var(--muted);
-            font-style: italic;
-            text-align: center;
-        }
-
-        .press-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: var(--white);
-            border-radius: 10px;
-            padding: 18px 22px;
-            text-decoration: none;
-            border: 1px solid rgba(11, 79, 108, 0.08);
-            transition: all 0.2s;
-            box-shadow: 0 2px 10px rgba(11, 79, 108, 0.04);
-        }
-
-        .press-item:hover {
-            transform: translateX(4px);
-            border-color: var(--sky);
-            box-shadow: 0 4px 20px rgba(11, 79, 108, 0.1);
-        }
-
-        .press-source {
-            flex-shrink: 0;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            background: var(--ocean);
-            color: var(--white);
-            padding: 4px 10px;
-            border-radius: 4px;
-            white-space: nowrap;
-        }
-
-        .press-title {
-            flex: 1;
-            font-size: 0.92rem;
-            color: var(--dark);
-            line-height: 1.5;
-            font-weight: 400;
-        }
-
-        .press-arrow {
-            flex-shrink: 0;
-            color: var(--sky);
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: transform 0.2s;
-        }
-
-        .press-item:hover .press-arrow {
-            transform: translateX(4px);
-        }
-
-        @media (max-width: 480px) {
-            .press-item {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-
-            .press-arrow {
-                display: none;
-            }
-        }
-
-        /* ── VIDEO ── */
-        #videos {
-            background: var(--dark);
-            padding: 96px 24px;
-        }
-
-        #videos .section-label {
-            color: var(--gold);
-        }
-
-        #videos .section-title {
-            color: var(--white);
-        }
-
-        #videos .section-desc {
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .video-header {
-            margin-bottom: 52px;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-
-        .video-card {
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .video-embed {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-embed iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .video-placeholder {
-            position: relative;
-            padding-bottom: 56.25%;
-            background: rgba(26, 140, 181, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .video-placeholder-inner {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        .play-icon {
-            width: 56px;
-            height: 56px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            padding-left: 4px;
-        }
-
-        .video-info {
-            padding: 18px 20px;
-        }
-
-        .video-title {
-            color: var(--white);
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .video-desc-text {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.82rem;
-            line-height: 1.6;
-        }
-
-        .video-more-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--gold);
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-decoration: none;
-            margin-top: 36px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
-            padding-bottom: 4px;
-            transition: gap 0.2s;
-        }
-
-        .video-more-link:hover {
-            gap: 14px;
-        }
-
-        /* ── LOCATION ── */
-        #location {
-            background: var(--sand);
-        }
-
-        .location-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .location-map {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 40px rgba(11, 79, 108, 0.15);
-            height: 400px;
-        }
-
-        .location-map iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .location-points {
-            list-style: none;
-            margin-top: 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .location-points li {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            font-size: 0.9rem;
-            color: var(--text);
-            line-height: 1.5;
-        }
-
-        .loc-dot {
-            width: 28px;
-            height: 28px;
-            min-width: 28px;
-            border-radius: 50%;
-            background: var(--ocean);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 0.7rem;
-            font-weight: 700;
-        }
-
-        /* ── CTA SECTION ── */
-        #contact {
-            background: linear-gradient(135deg, var(--ocean) 0%, #0d6e9a 60%, var(--sky) 100%);
-            text-align: center;
-            padding: 100px 24px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #contact::before {
-            content: '';
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        #contact .section-label {
-            color: var(--gold);
-        }
-
-        #contact .section-title {
-            color: var(--white);
-            margin: 0 auto 16px;
-        }
-
-        #contact .section-desc {
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0 auto 52px;
-            text-align: center;
-        }
-
-        .contact-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 48px 40px;
-            max-width: 520px;
-            margin: 0 auto;
-            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-avatar {
-            width: 128px;
-            height: 128px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--ocean), var(--sky));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--white);
-            margin: 0 auto 18px;
-        }
-
-        .contact-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-
-        .contact-role {
-            font-size: 0.82rem;
-            color: var(--muted);
-            margin-bottom: 32px;
-            letter-spacing: 0.5px;
-        }
-
-        .contact-divider {
-            height: 1px;
-            background: var(--foam);
-            margin: 0 -10px 28px;
-        }
-
-        .contact-tagline {
-            font-size: 0.9rem;
-            color: var(--muted);
-            margin-bottom: 28px;
-            line-height: 1.6;
-        }
-
-        .contact-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .cta-phone {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--ocean);
-            color: var(--white);
-            padding: 16px 24px;
-            border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: all 0.2s;
-        }
-
-        .cta-phone:hover {
-            background: #0a3d52;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(11, 79, 108, 0.3);
-        }
-
-        .cta-zalo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--sky);
-            color: var(--white);
-            padding: 16px 24px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .cta-zalo:hover {
-            background: #0055d4;
-            transform: translateY(-2px);
-        }
-
-        .contact-note {
-            font-size: 0.78rem;
-            color: var(--muted);
-            margin-top: 18px;
-        }
-
-        /* ── FOOTER ── */
-        footer {
-            background: var(--dark);
-            padding: 48px 48px 32px;
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.82rem;
-        }
-
-        .footer-inner {
-            max-width: 1140px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 32px;
-        }
-
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--white);
-            letter-spacing: 1px;
-        }
-
-        .footer-logo span {
-            color: var(--gold);
-        }
-
-        /* ── FLOATING CTA ── */
-        .floating-cta {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            z-index: 200;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: flex-end;
-        }
-
-        .float-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-
-        .float-phone {
-            background: var(--ocean);
-            color: var(--white);
-        }
-
-        .float-phone:hover {
-            background: #083d55;
-            transform: scale(1.04);
-        }
-
-        .float-zalo {
-            background: var(--sky);
-            color: var(--white);
-        }
-
-        .float-zalo:hover {
-            background: var(--sky);
-            transform: scale(1.04);
-        }
-
-        /* ── ANIMATIONS ── */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(28px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(32px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            nav {
-                padding: 14px 20px;
-            }
-
-            .about-grid,
-            .location-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-img::before,
-            .about-img::after {
-                display: none;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .gallery-item:first-child {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .gallery-item:first-child img {
-                min-height: 220px;
-            }
-
-            #stats {
-                padding: 32px 20px;
-            }
-
-            .stat-item {
-                padding: 10px 24px;
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                width: 100%;
-            }
-
-            .stat-item:last-child {
-                border-bottom: none;
-            }
-
-            .contact-card {
-                padding: 36px 24px;
-            }
-
-            .floating-cta {
-                bottom: 16px;
-                right: 16px;
-            }
-        }
-    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-456JF2CB64"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-456JF2CB64');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blanca City Vũng Tàu - Sun World & Pháo Hoa Biển</title>
+  <meta name="description"
+    content="Khám phá Blanca City - đại đô thị nghỉ dưỡng của Sun Group tại Vũng Tàu. Công viên nước Sun World 15ha, pháo hoa ven biển và hệ tiện ích đẳng cấp resort." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blanca City Vũng Tàu - Sun World & Pháo Hoa Biển" />
+  <meta property="og:description"
+    content="Đại đô thị du lịch nghỉ dưỡng của Sun Group ngay trung tâm biển Vũng Tàu. Đặt lịch tham quan & giữ chỗ pháo hoa ngay hôm nay." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og-image-placeholder.jpg" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <a href="#hero" class="nav-logo">BLANCA<span> CITY</span></a>
-        <a href="#contact" class="nav-cta">Đặt Lịch Tham Quan</a>
-    </nav>
+  <!-- ═══════════════ STICKY BOTTOM CTA ═══════════════ -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://zalo.me/0898678986" class="sticky-btn zalo-pulse" target="_blank" rel="noopener">
+      <i class="fa-brands fa-square-z"></i>
+      <span>Tư vấn ngay - Zalo</span>
+    </a>
+    <a href="https://zalo.me/0898678986" class="sticky-btn alt" target="_blank" rel="noopener">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Đặt lịch tham quan</span>
+    </a>
+  </div>
 
-    <!-- HERO -->
-    <section id="hero">
-        <div class="hero-badge">Khu Đô Thị Du Lịch Biển · Vũng Tàu</div>
-        <h1 class="hero-title">Biến Mỗi Chuyến Đi Vũng Tàu —<br />Thành Một <em>Tài Sản Sinh Lời</em></h1>
-        <p class="hero-sub">Trước đây, Vũng Tàu chỉ là điểm đến ngắn ngày. Blanca City đang thay đổi điều đó, với hệ
-            sinh thái nghỉ dưỡng, giải trí và thương mại trọn vẹn. Khách ở lại lâu hơn. Khai thác tốt hơn. Tài sản tạo
-            dòng tiền đều hơn mỗi tháng.</p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">📅 Đăng Ký Tham Quan Nhà Mẫu</a>
-            <a href="#about" class="btn-secondary">Khám Phá Dự Án</a>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-img reveal">
-                    <!-- THAY BẰNG ẢNH THỰC TẾ CỦA DỰ ÁN -->
-                    <img src="images/BistroCoffee.jpg" alt="Blanca City – Phối cảnh dự án" />
-                </div>
-                <div class="reveal">
-                    <div style="padding: 2rem 0; font-family: sans-serif;">
-                        <p
-                            style="font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #6b8090; margin: 0 0 10px;">
-                            Giới Thiệu Blanca City</p>
-                        <h2 style="font-size: 22px; font-weight: 600; color: #0d1b26; margin: 0 0 8px;">Blanca City –
-                            Giữ Khách Ở Lại Lâu Hơn</h2>
-                        <p
-                            style="font-size: 15px; color: #6b8090; line-height: 1.75; margin: 0 0 1.5rem; max-width: 600px;">
-                            Blanca City không chỉ để ở, mà để giải quyết một vấn đề rất rõ: Vũng Tàu đông khách, nhưng
-                            khách không ở lại lâu. Blanca City được thiết kế để thay đổi điều đó.
-                        </p>
-                        <div style="border-left: 3px solid #d1d5db; padding-left: 1.25rem; margin: 0 0 1.5rem;">
-                            <p style="font-size: 15px; font-weight: 600; color: #0d1b26; margin: 0 0 12px;">Một ngày tại
-                                đây không bị "đứt đoạn":</p>
-                            <div style="display:flex; flex-direction:column; gap:8px;">
-                                <div
-                                    style="display:flex; align-items:center; gap:12px; background:#f1f5f9; border-radius:8px; padding:10px 14px;">
-                                    <span
-                                        style="font-size:13px; font-weight:600; color:#6b8090; min-width:42px;">Sáng</span>
-                                    <span style="font-size:15px; color:#0d1b26;">Dạo biển, nghỉ dưỡng</span>
-                                </div>
-                                <div
-                                    style="display:flex; align-items:center; gap:12px; background:#f1f5f9; border-radius:8px; padding:10px 14px;">
-                                    <span
-                                        style="font-size:13px; font-weight:600; color:#6b8090; min-width:42px;">Chiều</span>
-                                    <span style="font-size:15px; color:#0d1b26;">Công viên nước, thể thao</span>
-                                </div>
-                                <div
-                                    style="display:flex; align-items:center; gap:12px; background:#f1f5f9; border-radius:8px; padding:10px 14px;">
-                                    <span
-                                        style="font-size:13px; font-weight:600; color:#6b8090; min-width:42px;">Tối</span>
-                                    <span style="font-size:15px; color:#0d1b26;">Ẩm thực, lễ hội, pháo hoa</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:0 0 1.5rem;">
-                            <div
-                                style="background:#f1f5f9; border-radius:8px; padding:14px 16px; border-left:3px solid #1a8cb5;">
-                                <p style="font-size:13px; color:#6b8090; margin:0 0 4px;">Trải nghiệm liền mạch</p>
-                                <p style="font-size:15px; font-weight:600; color:#0d1b26; margin:0;">Khách không rời đi
-                                    sớm</p>
-                            </div>
-                            <div
-                                style="background:#f1f5f9; border-radius:8px; padding:14px 16px; border-left:3px solid #16a34a;">
-                                <p style="font-size:13px; color:#6b8090; margin:0 0 4px;">Khách ở lại lâu hơn</p>
-                                <p style="font-size:15px; font-weight:600; color:#0d1b26; margin:0;">Khả năng khai thác
-                                    tăng</p>
-                            </div>
-                        </div>
-                        <div
-                            style="background:#f8fafc; border-radius:8px; padding:14px 18px; border:1px solid #e2e8f0;">
-                            <p style="font-size:15px; color:#0d1b26; line-height:1.75; margin:0;">
-                                Đó là cách dự án không chỉ tạo ra nơi ở, mà tạo ra <strong>dòng tiền thực tế</strong>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos">
-        <div class="container">
-            <div class="video-header reveal">
-                <p class="section-label">Video Dự Án</p>
-                <h2 class="section-title" style="color:white;">Trải Nghiệm <em style="color:var(--gold);">Blanca
-                        City</em></h2>
-                <p class="section-desc">Xem các video giới thiệu dự án, tiện ích và không gian sống thực tế</p>
-            </div>
-            <div class="video-grid">
-                <!-- VIDEO 1: THAY src BẰNG LINK YOUTUBE THỰC TẾ -->
-                <!-- Ví dụ: src="https://www.youtube.com/embed/VIDEO_ID_1" -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/X0qUkP5_baU?si=JDO95Wp1Br5MQ8fm"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Giới thiệu Blanca City"
-                            allowfullscreen loading="lazy"></iframe> -->
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Tổng Quan Dự Án Blanca City</div>
-                        <div class="video-desc-text">Khám phá toàn cảnh khu đô thị nghỉ dưỡng ven biển đẳng cấp</div>
-                    </div>
-                </div>
-                <!-- VIDEO 2 -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/lbVNLQzhltk?si=PJVeZ9-B7tgrK3YN"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <!-- <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tiện ích Blanca City"
-                            allowfullscreen loading="lazy"></iframe> -->
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Tiến độ Blanca City 04/2026</div>
-                        <div class="video-desc-text">Flycam trên cao tiến độ dự án tháng 4 năm 2026</div>
-                    </div>
-                </div>
-                <!-- VIDEO 3 -->
-                <div class="video-card reveal">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/F98wa-bKdqA?si=se9DcZ-2uVcuDt0F"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <div class="video-title">Roadshow quảng bá Blanca City</div>
-                        <div class="video-desc-text">Chuỗi sự kiên 10 ngày roadshow tại Vũng Tàu</div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top: 20px;">
-                <!-- THAY LINK KÊNH YOUTUBE THỰC TẾ -->
-                <a href="https://www.youtube.com/@blanca-city-vt" target="_blank" class="video-more-link">
-                    ▶&nbsp; Xem thêm video trên kênh YouTube →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section id="benefits">
-        <div class="container">
-            <div class="benefits-header reveal">
-                <p class="section-label">Lợi Ích Sở Hữu</p>
-                <h2 class="section-title">Vì Sao Chọn <em>Blanca City?</em></h2>
-                <p class="section-desc">6 lý do khiến Blanca City là lựa chọn đầu tư & nghỉ dưỡng thông minh nhất tại
-                    Vũng Tàu</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🌊</div>
-                    <div class="benefit-title">Trải Nghiệm Không Đứt Đoạn</div>
-                    <div class="benefit-desc">Blanca City được thiết kế để khách hàng ở lại lâu hơn. Ban ngày có chỗ vui
-                        chơi, buổi tối vẫn còn hoạt động để tiếp tục trải nghiệm, không bị "hết chỗ đi" sau 6–7 giờ tối
-                        như trước đây.<br /><br />👉 Khách ở lại thêm 1 đêm → doanh thu tăng thêm 1 ngày
-                    </div>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">💰</div>
-                    <div class="benefit-title">Khai Thác Cho Thuê Thực Tế</div>
-                    <div class="benefit-desc">Khách từ TP.HCM xuống Vũng Tàu cuối tuần luôn rất đông, nhu cầu thuê có
-                        sẵn, dễ khai thác ngắn hạn.<br /><br />👉 Doanh thu thực tế khoảng 25–40 triệu/tháng<br />👉
-                        Cuối tuần gần như kín phòng</div>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🎓</div>
-                    <div class="benefit-title">Hệ Sinh Thái Đầy Đủ Để Ở Lâu Dài</div>
-                    <div class="benefit-desc">Không chỉ để khai thác, Blanca City còn đủ điều kiện để định cư: trường
-                        học liên kết quốc tế, trung tâm thương mại, không gian sinh hoạt tiện nghi.<br /><br />👉 Sống –
-                        làm việc, nghỉ ngơi trong cùng một khu</div>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🚗</div>
-                    <div class="benefit-title">Hạ Tầng Đang Tạo Bước Ngoặt</div>
-                    <div class="benefit-desc">Cao tốc rút ngắn thời gian di chuyển từ TP.HCM. Sân bay Long Thành chuẩn
-                        bị vận hành, kết nối tốt hơn, lượng khách tăng lên.<br /><br />👉 Hạ tầng đi tới đâu → giá trị
-                        bất động sản tăng tới đó</div>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🏗️</div>
-                    <div class="benefit-title">Uy Tín Chủ Đầu Tư</div>
-                    <div class="benefit-desc">Sun Group là đơn vị đứng sau dự án, với kinh nghiệm phát triển các điểm
-                        đến lớn như Bà Nà Hills và Phú Quốc.<br /><br />👉 Thi công đồng bộ, vận hành có kinh
-                        nghiệm<br />👉 Có thể khai thác sớm, không phải chờ quá lâu</div>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🏝️</div>
-                    <div class="benefit-title">Quỹ Đất Biển Sở Hữu Lâu Dài Hiếm</div>
-                    <div class="benefit-desc">Quỹ đất ven biển sở hữu lâu dài tại Vũng Tàu ngày càng khan hiếm, giá trị
-                        giữ ổn định và tăng theo thời gian.<br /><br />👉 Giai đoạn đầu → giá còn tốt, dễ chọn vị trí
-                        đẹp</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery">
-        <div class="container">
-            <div class="gallery-header reveal">
-                <p class="section-label">Hình Ảnh Dự Án</p>
-                <h2 class="section-title">Khám Phá <em>Không Gian Sống</em></h2>
-            </div>
-            <div class="gallery-grid reveal">
-                <!-- THAY BẰNG ẢNH THỰC TẾ KHI CÓ -->
-                <div class="gallery-item">
-                    <img src="images/viewall.jpg" alt="Toàn cảnh Blanca City" />
-                    <div class="gallery-overlay"><span>Toàn Cảnh Khu Đô Thị</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/hoboi.jpg" alt="Hồ bơi vô cực" />
-                    <div class="gallery-overlay"><span>Hồ Bơi Vô Cực</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/Bedroom.jpg" alt="Nội thất căn hộ" />
-                    <div class="gallery-overlay"><span>Nội Thất Căn Hộ</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/sunworld.jpg" alt="Khu vực tiện ích" />
-                    <div class="gallery-overlay"><span>Khu Tiện Ích</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/nhabep.jpg" alt="Bếp và phòng khách" />
-                    <div class="gallery-overlay"><span>Không Gian Bếp</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/Bedroom2.jpg" alt="Nội thất căn hộ" />
-                    <div class="gallery-overlay"><span>Nội Thất Căn Hộ</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/nhabep2.jpg" alt="Bếp và phòng khách" />
-                    <div class="gallery-overlay"><span>Không Gian Bếp</span></div>
-                </div>
-            </div>
-            <!-- <p class="gallery-note">* Hình ảnh minh họa — ảnh thực tế sẽ được cập nhật sớm</p> -->
-        </div>
-    </section>
-    <!-- PRESS -->
-    <section id="press" style="background:var(--foam); padding:80px 24px;">
-        <div class="container">
-            <div style="text-align:center; margin-bottom:48px;" class="reveal">
-                <p class="section-label">Truyền Thông Nói Gì</p>
-                <h2 class="section-title">Blanca City <em>Trên Báo Chí</em></h2>
-            </div>
-            <div style="display:flex; flex-direction:column; gap:14px;">
-
-                <!-- BÀI 1 – THAY href VÀ NỘI DUNG -->
-                <a href="https://tuoitre.vn/tim-kiem.htm?keywords=blanca%20city" target="_blank" rel="noopener"
-                    class="press-item reveal">
-                    <span class="press-source">Tuổi Trẻ</span>
-                    <span class="press-title">Blanca City – Khu đô thị du lịch biển đầu tiên tại Vũng Tàu thu hút hàng
-                        nghìn nhà đầu tư</span>
-                    <span class="press-arrow">→</span>
-                </a>
-
-                <!-- BÀI 2 -->
-                <a href="https://vnexpress.net/tag/blanca-city-1783673" target="_blank" rel="noopener"
-                    class="press-item reveal">
-                    <span class="press-source">VnExpress</span>
-                    <span class="press-title">Sun Group ra mắt tổ hợp nghỉ dưỡng Blanca City, thay đổi diện mạo du lịch
-                        Vũng Tàu</span>
-                    <span class="press-arrow">→</span>
-                </a>
-
-                <!-- BÀI 3 -->
-                <a href="https://cafef.vn/blanca-city.html" target="_blank" rel="noopener" class="press-item reveal">
-                    <span class="press-source">CafeF</span>
-                    <span class="press-title">Tiềm năng tăng giá của Blanca City: Quỹ đất ven biển ngày càng khan
-                        hiếm</span>
-                    <span class="press-arrow">→</span>
-                </a>
-
-                <!-- BÀI 4 -->
-                <a href="https://vietnamnet.vn/tim-kiem?q=blanca+city" target="_blank" rel="noopener"
-                    class="press-item reveal">
-                    <span class="press-source">Việt Nam Net</span>
-                    <span class="press-title">Vũng Tàu lên tầm quốc tế với dự án nghỉ dưỡng Blanca City của Sun
-                        Group</span>
-                    <span class="press-arrow">→</span>
-                </a>
-
-                <!-- BÀI 5 -->
-                <a href="https://dantri.com.vn/tim-kiem/blanca+city.htm" target="_blank" rel="noopener"
-                    class="press-item reveal">
-                    <span class="press-source">Dân Trí</span>
-                    <span class="press-title">Vũng Tàu lên tầm quốc tế với dự án nghỉ dưỡng Blanca City của Sun
-                        Group</span>
-                    <span class="press-arrow">→</span>
-                </a>
-                <a href="https://baomoi.com/tag/Blanca-City.epi" target="_blank" rel="noopener"
-                    class="press-item reveal">
-                    <span class="press-source">Báo Mới</span>
-                    <span class="press-title">Sân bay cất cánh, công viên vận hành 'kích hoạt' thị trường đầu tư Vũng
-                        Tàu</span>
-                    <span class="press-arrow">→</span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- LOCATION -->
-    <section id="location">
-        <div class="container">
-            <div class="location-grid">
-                <div class="reveal">
-                    <p class="section-label">Vị Trí</p>
-                    <h2 class="section-title">Trái Tim <em>Vũng Tàu</em></h2>
-                    <p class="section-desc">Blanca City tọa lạc tại vị trí vàng ven biển Vũng Tàu, dễ dàng kết nối khắp
-                        nơi.</p>
-                    <ul class="location-points">
-                        <li>
-                            <div class="loc-dot">🏖</div> Ngay cạnh bãi biển, dạo sóng buổi sáng, ngắm hoàng hôn buổi
-                            tối
-                        </li>
-                        <li>
-                            <div class="loc-dot">🎢</div> Công viên nước Sun World ngay trong khu, trải nghiệm trọn
-                            ngày
-                        </li>
-                        <li>
-                            <div class="loc-dot">🛍</div> Trung tâm thương mại mặt biển lớn nhất miền Nam
-                        </li>
-                        <li>
-                            <div class="loc-dot">🎓</div> Trường quốc tế cấp 1–3 & Bệnh viện Mặt Trời liên kết quốc tế
-                        </li>
-                        <li>
-                            <div class="loc-dot">🚗</div> 90 phút từ TP.HCM qua cao tốc Biên Hòa – Vũng Tàu
-                        </li>
-                    </ul>
-                </div>
-                <div class="location-map reveal">
-                    <!-- Bản đồ Vũng Tàu -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.442666455861!2d107.13366830523289!3d10.386236284832494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175710048dc27cb%3A0xad7a8f4c58982de4!2sBlanca%20City%20Sungroup!5e0!3m2!1sen!2sus!4v1777805248015!5m2!1sen!2sus"
-                        width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <!-- <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62762.86906837577!2d107.01462!3d10.3414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175abb4f9b2cde5%3A0x2a1bb5a7c8c5b8c!2sV%C5%A9ng%20T%C3%A0u!5e0!3m2!1svi!2svn!4v1700000000000"
-                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TẠI SAO BÂY GIỜ -->
-    <section id="whynow" style="background:var(--dark);padding:80px 24px;">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:52px;" class="reveal">
-                <p class="section-label" style="color:var(--gold);">Cơ Hội Có Hạn</p>
-                <h2 class="section-title" style="color:var(--white);">Tại Sao Nên <em style="color:var(--gold);">Tìm
-                        Hiểu Ngay?</em></h2>
-                <p class="section-desc" style="color:rgba(255,255,255,0.55);margin:0 auto;">3 lý do khiến việc chờ đợi
-                    có thể là quyết định đắt giá nhất bạn từng đưa ra.</p>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-                <div class="reveal"
-                    style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:32px 28px;">
-                    <div style="font-size:2rem;margin-bottom:16px;">💵</div>
-                    <div style="font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:10px;">Giá Mở Bán Sớm —
-                        Tốt Nhất</div>
-                    <div style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;">Hiện tại đang ở giai
-                        đoạn mở bán đầu tiên với chính sách giá tốt nhất từ chủ đầu tư. Khi tiện ích hoàn thiện và dự án
-                        đi vào hoạt động, giá sẽ tăng đáng kể không quay lại mức này nữa.</div>
-                </div>
-                <div class="reveal"
-                    style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:32px 28px;">
-                    <div style="font-size:2rem;margin-bottom:16px;">🏝️</div>
-                    <div style="font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:10px;">Quỹ Đất Ven Biển
-                        Đang Cạn</div>
-                    <div style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;">Quỹ đất sở hữu lâu dài
-                        mặt tiền biển tại Vũng Tàu ngày càng khan hiếm. Những căn đẹp nhất, tầng cao nhất sẽ không còn
-                        nhiều. Tìm hiểu sớm, cơ hội chọn lựa sẽ tốt hơn.</div>
-                </div>
-                <div class="reveal"
-                    style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:32px 28px;">
-                    <div style="font-size:1.6rem;margin-bottom:16px;">🚀</div>
-                    <div style="font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:10px;">Tiến Độ Nhanh =
-                        Thời Điểm Tăng Giá Ngắn Lại</div>
-                    <div style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;">
-                        Sun Group triển khai với tốc độ cao:
-                        <ul style="margin:10px 0 10px 16px;display:flex;flex-direction:column;gap:6px;">
-                            <li>Hạ tầng và tiện ích được đẩy nhanh</li>
-                            <li>Thời gian chờ "dự án hình thành giá trị" rút ngắn</li>
-                        </ul>
-                        👉 Điều này đồng nghĩa: Khoảng thời gian mua giá thấp sẽ không kéo dài.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT / CTA -->
-    <section id="contact">
-        <div class="container">
-            <p class="section-label reveal" style="color:var(--sky-light);">Liên Hệ Ngay</p>
-            <h2 class="section-title reveal" style="max-width:600px; margin: 0 auto 16px;">Đặt Lịch Tham
-                Quan<br /><em style="color:var(--gold);">Nhà Mẫu Miễn Phí</em></h2>
-            <p class="section-desc reveal">Gặp trực tiếp chuyên viên tư vấn, tham quan nhà mẫu thực tế và nhận bảng giá
-                ưu đãi sớm nhất.</p>
-            <div class="contact-card reveal">
-
-                <img class="contact-avatar" src="images/nam.jpg" alt="Phương Nam" />
-                <!-- <div class="contact-avatar">PN</div> -->
-                <div class="contact-name">Phương Nam</div>
-                <div class="contact-role">Trưởng Phòng Kinh Doanh Blanca City · Vũng Tàu</div>
-                <div class="contact-divider"></div>
-                <p class="contact-tagline">Liên hệ ngay để được tư vấn miễn phí, đặt lịch tham quan nhà mẫu và nhận ưu
-                    đãi đặc biệt từ chủ đầu tư.</p>
-                <div class="contact-actions">
-                    <a href="tel:0898678986" class="cta-phone">
-                        📞 &nbsp;Gọi Ngay: 0898.6789.86
-                    </a>
-                    <a href="https://zalo.me/0898678986" target="_blank" class="cta-zalo">
-                        💬 &nbsp;Nhắn Zalo: 0898.6789.86
-                    </a>
-                </div>
-                <p class="contact-note">🕐 Hỗ trợ từ 8:00 – 21:00 hàng ngày kể cả cuối tuần</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-logo">BLANCA <span>CITY</span></div>
-            <div>© 2025 Blanca City – Khu Đô Thị Du Lịch Biển Vũng Tàu</div>
-            <div>Tư vấn: <strong style="color:rgba(255,255,255,0.7)">0898.6789.86</strong></div>
-        </div>
-    </footer>
-
-    <!-- FLOATING BUTTONS -->
-    <div class="floating-cta">
-        <a href="tel:0898678986" class="float-btn float-phone">📞 Gọi Ngay</a>
-        <a href="https://zalo.me/0898678986" target="_blank" class="float-btn float-zalo">💬 Zalo</a>
+  <!-- ═══════════════ SECTION 1: HERO WATER PARK ═══════════════ -->
+  <section class="hero-section" id="hero-waterpark">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline preload="none" class="hero-video" id="videoWaterpark">
+        <!-- Thay src bằng video công viên nước thực tế -->
+        <source src="images/sunworld-38.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay gradient-dark"></div>
     </div>
+    <div class="hero-content animate-on-scroll">
+      <p class="hero-eyebrow"><i class="fa-solid fa-sun"></i> Sun World · Vũng Tàu</p>
+      <h1 class="hero-title">Nơi Sóng Biển Gặp<br /><em>Thiên Đường Giải Trí</em></h1>
+      <p class="hero-sub">Công viên nước đẳng cấp quốc tế đầu tiên ngay mặt tiền biển Vũng Tàu.<br />Với hơn 20 trò
+        chơi, hồ sóng đôi 2.4m, đường trượt đua 10 làn đầu tiên trên thế giới.</p>
+      <a href="https://zalo.me/0898678986" target="_blank" rel="noopener" class="cta-primary">
+        <span>Đặt lịch tham quan công viên nước</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Cuộn xuống</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <script>
-        // Scroll reveal
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) { e.target.classList.add('visible'); }
-            });
-        }, { threshold: 0.1 });
-        reveals.forEach(el => observer.observe(el));
+  <!-- ═══════════════ SECTION 2: HERO PHÁO HOA ═══════════════ -->
+  <section class="hero-section fireworks-section" id="section-fireworks">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline preload="none" class="hero-video" id="videoFireworks">
+        <!-- Thay src bằng video pháo hoa thực tế -->
+        <source src="images/firecrack-28.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay gradient-gold"></div>
+    </div>
+    <div class="hero-content animate-on-scroll">
+      <p class="hero-eyebrow gold-text"><i class="fa-solid fa-star"></i> Độc quyền · Ven biển</p>
+      <h1 class="hero-title">Một Đêm Pháo Hoa<br /><em>Không Thể Quên</em></h1>
+      <p class="hero-sub">Ngắm pháo hoa bừng sáng trên mặt biển từ vị trí đẹp nhất Vũng Tàu.<br />
+        <em> Đặt chỗ sớm trước 30/05/2026 </em>
+      </p>
+      <a href="https://zalo.me/0898678986" target="_blank" rel="noopener" class="cta-primary gold">
+        <span>Giữ chỗ đẹp xem pháo hoa</span>
+        <i class="fa-solid fa-fire"></i>
+      </a>
+    </div>
+  </section>
 
-        // Smooth nav bg on scroll
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            nav.style.background = window.scrollY > 60
-                ? 'rgba(11,79,108,0.97)'
-                : 'rgba(11,79,108,0.85)';
-        });
-    </script>
+  <!-- ═══════════════ SECTION 3: TIỆN ÍCH ═══════════════ -->
+  <section class="amenities-section" id="section-park">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-eyebrow">Hệ sinh thái All-in-One</p>
+        <h2 class="section-title">Mọi khoảnh khắc đều<br /><em>là nghỉ dưỡng</em></h2>
+        <p class="section-desc">96ha tiện ích đẳng cấp, nơi mỗi buổi sáng thức dậy là một kỳ nghỉ mới.</p>
+      </div>
+      <div class="amenities-grid">
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/water-park.jpg" alt="Công viên nước Sun World" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sun World</span>
+            <h3>Công viên nước lớn nhất đông nam bộ</h3>
+            <p>Hơn 20 trò chơi đẳng cấp quốc tế. Tàu lượn nước siêu tốc dài gần 350m, hồ sóng đôi cao 2.4m và đường
+              trượt đua 10 làn đầu tiên trên thế giới tạo nên một điểm đến giải trí chưa từng có tại miền Nam.</p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/Outdoor.jpg" alt="Quảng trường biển & lễ hội" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Ocean Square</span>
+            <h3>Quảng trường biển & lễ hội</h3>
+            <p>Sẽ là nơi mọi người cùng nhau đi dạo, xem biểu diễn nghệ thuật, hòa vào không khí lễ hội và tận hưởng
+              năng lượng sôi động của thành phố biển về đêm. Đây là nơi tạo nên “linh hồn” cho Blanca City.</p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/TTTM.jpg" alt="Trung tâm thương mại mặt biển" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Lifestyle Mall</span>
+            <h3>Trung tâm thương mại mặt biển 5ha</h3>
+            <p>Sau này có thể bắt đầu buổi sáng bằng cafe ven biển, chiều mua sắm cùng gia đình, tối nghe nhạc sống hoặc
+              gặp gỡ bạn bè trong không khí nghỉ dưỡng hiện đại. Không đơn thuần là trung tâm thương mại, mà là “điểm
+              hẹn cuối tuần” mới của Vũng Tàu.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/beach.jpg" alt="Bãi biển" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Beachfront</span>
+            <h3>Bãi biển ngay trước cửa nhà</h3>
+            <p>Đường bờ biển tự nhiên trải dài, cát trắng, nước trong vắt. Buổi sáng đi dạo ven biển, chiều ngắm hoàng
+              hôn, tối nghe sóng biển giữa không khí mát lành — cảm giác nghỉ dưỡng hiện diện mỗi ngày..</p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/events.jpg" alt="Khu lễ hội" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Night Walk</span>
+            <h3>Phố đi bộ & cuộc sống về đêm ven biển</h3>
+            <p>Đây sẽ là nơi mọi người tụ tập sau giờ làm, dạo phố cuối tuần, khám phá ẩm thực đường phố, xem nghệ sĩ
+              biểu diễn và tận hưởng nhịp sống biển hiện đại. Một Vũng Tàu mới, trẻ hơn, sôi động hơn và nhiều cảm xúc
+              hơn.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/beach-club.jpg" alt="Phố đi bộ" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Beach Club</span>
+            <h3>Cafe & Lounge ngoài trời</h3>
+            <p>Ngồi giữa tiếng sóng biển, nhâm nhi cafe sáng hoặc cocktail dưới ánh hoàng hôn. Cảm giác như một câu lạc
+              bộ biển Bali ngay giữa lòng Vũng Tàu.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/park.jpg" alt="Cafe & Lounge ngoài trời" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Wellness Park</span>
+            <h3>Công viên chữa lành giữa lòng thành phố biển</h3>
+            <p>Những khu vườn nhiệt đới, hồ cảnh quan, lối dạo lát gỗ và không gian thiền định tạo nên một “ốc đảo xanh”
+              để cân bằng lại nhịp sống. Không chỉ để ngắm, mà là nơi con người thật sự sống chậm hơn, thư giãn hơn và
+              kết nối với thiên nhiên mỗi ngày.</p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/sport.jpg" alt="Khu vui chơi trẻ em" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sport Community</span>
+            <h3>Hệ tiện ích thể thao năng động</h3>
+            <p>Đường chạy bộ ven biển, sân tennis, pickleball, bóng đá và các khu vận động ngoài trời tạo nên một cộng
+              đồng sống khỏe mạnh và hiện đại. Sau này, việc chạy bộ sáng sớm hay chơi thể thao cùng bạn bè sẽ trở thành
+              một phần rất tự nhiên của cuộc sống hàng ngày.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/family.jpg" alt="Ánh sáng đêm" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Playground</span>
+            <h3>Thiên đường vui chơi cho gia đình</h3>
+            <p>Không gian vui chơi dành riêng cho trẻ em với các trò chơi đầy màu sắc và giàu tính khám phá. Đây không
+              chỉ là nơi trẻ em vui chơi, mà còn là nơi cả gia đình cùng nhau tạo nên những ký ức tuổi thơ đáng nhớ.</p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/hoboi.jpg" alt="Lễ hội pháo hoa" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Pool Retreat</span>
+            <h3>Hồ bơi & Jacuzzi chuẩn resort</h3>
+            <p>Hồ bơi thư giãn, jacuzzi tạo nên cảm giác nghỉ dưỡng đúng nghĩa mỗi ngày. Chỉ cần vài phút dưới làn nước
+              mát hoặc ngồi cạnh hồ bơi nhìn thành phố biển, mọi áp lực dường như đều chậm lại.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/sky-lounge.jpg" alt="Lễ hội pháo hoa" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sky Lounge</span>
+            <h3>Không gian trên mây</h3>
+            <p>Sky Lounge trên tầng cao mang đến trải nghiệm ngắm toàn cảnh biển và thành phố từ trên không. Đây là nơi
+              dành cho những buổi cafe sáng, gặp gỡ đối tác, ngắm hoàng hôn hoặc đơn giản là tận hưởng cảm giác “sống
+              trên mây” giữa gió biển.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/sky-golf.jpg" alt="Lễ hội pháo hoa" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sky Golf</span>
+            <h3>Golf trên mây</h3>
+            <p>Một trong những tiện ích khác biệt nhất tại Blanca City. Tập những cú đánh giữa tầng không và gió biển,
+              tận hưởng trải nghiệm thể thao thượng lưu ngay trên đỉnh tòa nhà, nơi mỗi khoảnh khắc đều mang cảm giác
+              rất riêng.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/firework.jpg" alt="Lễ hội pháo hoa" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Fireworks Festival</span>
+            <h3>Những đêm pháo hoa bên biển</h3>
+            <p>Không chỉ là pháo hoa, mà là những khoảnh khắc biến Blanca City trở thành tâm điểm mới của miền Nam. Ánh
+              sáng, âm nhạc, biển đêm và hàng ngàn người cùng hướng mắt lên bầu trời, tạo nên những cảm xúc rất khó
+              quên.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenity-card animate-on-scroll">
+          <div class="card-img-wrap">
+            <img src="images/chonoi.jpg" alt="Lễ hội pháo hoa" loading="lazy" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sea Heritage</span>
+            <h3>Cảm hứng văn hóa biển Việt Nam</h3>
+            <p>Từ hình tượng Cá Ông Nam Hải đến cảm hứng chợ nổi Nam Bộ, Blanca City không chỉ hiện đại mà còn mang tinh
+              thần văn hóa biển phương Nam vào từng trải nghiệm. Đây không phải một dự án có thể đặt ở bất kỳ đâu, mà
+              là một nơi mang bản sắc rất riêng của Vũng Tàu.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 4: BÁO CHÍ ═══════════════ -->
+  <section class="press-section" id="section-press">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-eyebrow">Truyền thông nói gì</p>
+        <h2 class="section-title">Blanca City trên<br /><em>mặt báo</em></h2>
+      </div>
+      <div class="press-list animate-on-scroll">
+        <a href="https://tuoitre.vn/tim-kiem.htm?keywords=blanca%20city" class="press-item" target="_blank"
+          rel="noopener">
+          <span class="press-source">Tuổi Trẻ</span>
+          <span class="press-title">Blanca City - Đại đô thị nghỉ dưỡng đẳng cấp của Sun Group tại Vũng Tàu</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://vnexpress.net/tag/blanca-city-1783673" class="press-item" target="_blank" rel="noopener">
+          <span class="press-source">VNExpress</span>
+          <span class="press-title">Sun Group mang Sun World về miền Nam với quy mô chưa từng có</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://vietnamnet.vn/tim-kiem?q=blanca+city" class="press-item" target="_blank" rel="noopener">
+          <span class="press-source">VietnamNet</span>
+          <span class="press-title">Vũng Tàu sắp có công viên nước mặt tiền biển 15ha đầu tiên tại Việt Nam</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://cafef.vn/blanca-city.html" class="press-item" target="_blank" rel="noopener">
+          <span class="press-source">CafeF</span>
+          <span class="press-title">Blanca City - Bước ngoặt mới cho du lịch nghỉ dưỡng phía Nam</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://dantri.com.vn/tim-kiem/blanca+city.htm" class="press-item" target="_blank" rel="noopener">
+          <span class="press-source">Dân Trí</span>
+          <span class="press-title">Chương tiếp theo của Sun Group: Khi Vũng Tàu trở thành điểm đến biểu tượng</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://baomoi.com/tag/Blanca-City.epi" class="press-item" target="_blank" rel="noopener">
+          <span class="press-source">Báo Mới</span>
+          <span class="press-title">Từ Bà Nà Hills đến Blanca City. Công thức thành công của Sun Group</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 5: VIDEO YOUTUBE ═══════════════ -->
+  <section class="video-section" id="section-videos">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-eyebrow">Xem tận mắt</p>
+        <h2 class="section-title">Blanca City<br /><em>từ góc nhìn thực tế</em></h2>
+      </div>
+      <div class="video-grid animate-on-scroll">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/X0qUkP5_baU?si=JDO95Wp1Br5MQ8fm"
+            title="Blanca City Vũng Tàu - Tổng quan dự án"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/lbVNLQzhltk?si=PJVeZ9-B7tgrK3YN"
+            title="Flycam trên cao tiến độ 04/2026"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/F98wa-bKdqA?si=se9DcZ-2uVcuDt0F"
+            title="Chuỗi sự kiên 10 ngày roadshow tại Vũng Tàu"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/2MXZBnMOZ_Y?si=U3RJ-ZpMazB0Gs2W&amp;start=766"
+            title="Thực tế trải nghiệm công viên nước"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 6: TÂM LÝ KHÁCH HÀNG ═══════════════ -->
+  <section class="psychology-section" id="section-why">
+    <div class="container">
+      <div class="psych-inner animate-on-scroll">
+        <div class="psych-left">
+          <p class="section-eyebrow">Vì sao nên biết sớm</p>
+          <h2 class="section-title">Blanca City không chỉ là<br /><em>một dự án bất động sản</em></h2>
+        </div>
+        <div class="psych-right">
+          <p class="psych-lead">Sun Group không xây nhà. Họ xây <strong>điểm đến</strong>.</p>
+          <p>Nhìn lại Bà Nà Hills những năm đầu, hay Phú Quốc trước khi được đánh thức, ít ai tưởng tượng những vùng
+            đất ấy sau này lại trở thành biểu tượng du lịch của Việt Nam.</p>
+          <p>Điểm đặc biệt của Sun Group là họ không chọn nơi đã sẵn đông đúc. Họ chọn những vùng đất có tiềm năng, rồi
+            từng bước tạo ra lý do để hàng triệu người phải tìm đến.</p>
+          <p>Từ cáp treo Bà Nà, Cầu Vàng, Sun World Phú Quốc đến những quảng trường, lễ hội và hệ sinh thái nghỉ dưỡng,
+            nơi nào Sun xuất hiện, nơi đó dần hình thành một nhịp sống hoàn toàn mới.
+          <p> Và hiện tại, Vũng Tàu đang ở điểm khởi đầu của hành trình đó.</p>
+          <div class="psych-points">
+            <div class="psych-point">
+              <i class="fa-solid fa-route"></i>
+              <div>
+                <strong>60 phút từ TP.HCM</strong>
+                <span>Qua cao tốc, cuối tuần xuống biển không còn là câu chuyện xa xỉ.</span>
+              </div>
+            </div>
+            <div class="psych-point">
+              <i class="fa-solid fa-plane-departure"></i>
+              <div>
+                <strong>30 phút từ sân bay Long Thành</strong>
+                <span>Khi sân bay hoàn thành, dòng khách quốc tế đổ về đây, và Blanca City là điểm đến đầu tiên họ
+                  thấy.</span>
+              </div>
+            </div>
+            <div class="psych-point">
+              <i class="fa-solid fa-train"></i>
+              <div>
+                <strong>Tuyến đường sắt Biên Hòa - Vũng Tàu</strong>
+                <span>Kết nối tương lai hoàn chỉnh — hạ tầng đi trước, giá trị tăng sau.</span>
+              </div>
+            </div>
+            <div class="psych-point">
+              <i class="fa-solid fa-eye"></i>
+              <div>
+                <strong>Mọi thứ đang hình thành</strong>
+                <span>Giống Đà Nẵng của hơn 10 năm trước. Hay Phú Quốc những ngày đầu tiên. Khi mọi thứ thành hình, giá
+                  trị của vùng đất thường đã bước sang một giai đoạn khác.</span>
+              </div>
+            </div>
+
+          </div>
+          <blockquote class="psych-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            Và đó là lý do nhiều người muốn đến sớm, để cảm nhận trước khi thành phố này thật sự thức giấc.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 7: CTA CUỐI TRANG ═══════════════ -->
+  <section class="final-cta-section" id="section-contact">
+    <div class="cta-bg-video-wrap">
+      <div class="cta-bg-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="final-cta-inner animate-on-scroll">
+        <p class="section-eyebrow gold-text"><i class="fa-solid fa-star"></i> Liên hệ tư vấn</p>
+        <h2 class="cta-title">Tham quan thực tế<br /><em>trước khi thành phố này thức giấc</em></h2>
+        <p class="cta-sub">Đặt lịch tham quan ngay hôm nay. <br />để cảm nhận Blanca City một cách trọn vẹn nhất.</p>
+        <div class="contact-card">
+          <!-- <div class="contact-avatar"> -->
+          <img class="contact-avatar" src="images/nam.jpg" alt="Phương Nam" />
+          <!-- <i class="fa-solid fa-user-tie"></i> -->
+          <!-- </div> -->
+          <div class="contact-info">
+            <strong>Dương Phương Nam</strong>
+            <span>Trưởng phòng kinh doanh · Blanca City Vũng Tàu</span>
+          </div>
+        </div>
+
+        <div class="final-cta-btns">
+          <a href="https://zalo.me/0898678986" target="_blank" rel="noopener" class="cta-primary zalo-pulse">
+            <i class="fa-brands fa-square-z"></i>
+            <span>Nhắn Zalo ngay</span>
+          </a>
+          <a href="tel:0898678986" class="cta-secondary">
+            <i class="fa-solid fa-phone"></i>
+            <span>Gọi: 0898 6789 86</span>
+          </a>
+        </div>
+
+        <p class="cta-note"> 🕐 Hỗ trợ từ 9:00 - 21:00 hàng ngày kể cả cuối tuần</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Blanca City <span>·</span> Sun Group</p>
+      <p class="footer-sub">Vũng Tàu · Việt Nam</p>
+      <p class="footer-copy">© 2025 Dương Phương Nam - Trưởng phòng kinh doanh Blanca City</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
