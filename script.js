@@ -39,15 +39,20 @@
 
   const stickyObserver = new IntersectionObserver(
     ([entry]) => {
-      if (!entry.isIntersecting && !stickyShown) {
-        stickyCta.classList.add('visible');
-        stickyShown = true;
+      if (entry.isIntersecting) {
+        if (!stickyShown) {
+          stickyCta.classList.add('visible');
+          stickyShown = true;
+        }
+      } else {
+        stickyCta.classList.remove('visible');
+        stickyShown = false;
       }
     },
-    { threshold: 0.5 }
+    { threshold: 0.05 }
   );
-  const heroSection = document.getElementById('hero-waterpark');
-  if (heroSection) stickyObserver.observe(heroSection);
+  const stickyPart = document.getElementById('show-cta');
+  if (stickyPart) stickyObserver.observe(stickyPart);
 
   /* ── 3. PARALLAX (light, CSS-based via transform) */
   const heroVideos = document.querySelectorAll('.hero-video');
