@@ -18,8 +18,8 @@
           // Only stagger if parent is a grid (amenities / psych-points)
           const parent = entry.target.parentElement;
           if (parent.classList.contains('amenities-grid') ||
-              parent.classList.contains('psych-points') ||
-              parent.classList.contains('press-list')) {
+            parent.classList.contains('psych-points') ||
+            parent.classList.contains('press-list')) {
             idx = Math.min(idx, 6);
             entry.target.style.transitionDelay = `${idx * 0.07}s`;
           }
@@ -77,7 +77,7 @@
       entries.forEach((entry) => {
         const vid = entry.target;
         if (entry.isIntersecting) {
-          vid.play().catch(() => {});
+          vid.play().catch(() => { });
         } else {
           vid.pause();
         }
@@ -103,14 +103,34 @@
 
   /* ── 7. VIDEO placeholder fallback ─────────────── */
   // If placeholder videos fail to load, show a gradient background
-  bgVideos.forEach((vid) => {
-    vid.addEventListener('error', () => {
-      const wrap = vid.closest('.hero-video-wrap');
-      if (wrap) {
-        wrap.style.background = 'linear-gradient(135deg, #0a1520 0%, #0d2233 50%, #080b10 100%)';
-        vid.style.display = 'none';
-      }
-    });
-  });
+  // bgVideos.forEach((vid) => {
+  //   vid.addEventListener('error', () => {
+  //     const wrap = vid.closest('.hero-video-wrap');
+  //     if (wrap) {
+  //       wrap.style.background = 'linear-gradient(135deg, #0a1520 0%, #0d2233 50%, #080b10 100%)';
+  //       vid.style.display = 'none';
+  //     }
+  //   });
+  // });
+  function isZaloIOS() {
+    const ua = navigator.userAgent || '';
+    const isZalo = /ZaloApp|Zalo\/|zalo/i.test(ua);
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    return isZalo && isIOS;
+  }
 
+  const videos = [
+    document.getElementById('videoWaterpark'),
+    document.getElementById('videoFireworks')
+  ]
+
+  if (isZaloIOS()) {
+    for (const video of videos) {
+      const wrap = video.closest('.hero-video-wrap');
+      wrap.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${video.poster})`
+      wrap.style.backgroundSize = 'cover';
+      wrap.style.backgroundPosition = 'center';
+      video.style.display = 'none';
+    }
+  }
 })();
