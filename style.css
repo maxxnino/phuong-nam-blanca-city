@@ -409,7 +409,7 @@ a {
 
 .card-tag {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--c-ocean);
@@ -419,7 +419,7 @@ a {
 
 .card-body h3 {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: var(--c-white);
   margin-bottom: 8px;
@@ -431,7 +431,7 @@ a {
 } */
 
 .card-body p {
-  font-size: 0.87rem;
+  font-size: 0.9rem;
   color: rgba(244, 241, 235, 0.6);
   line-height: 1.65;
   font-weight: 300;
@@ -472,7 +472,7 @@ a {
 
 .press-source {
   flex-shrink: 0;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -486,7 +486,7 @@ a {
 
 .press-title {
   flex: 1;
-  font-size: 0.92rem;
+  font-size: 1rem;
   color: rgba(244, 241, 235, 0.75);
   font-weight: 300;
   line-height: 1.4;
@@ -494,7 +494,7 @@ a {
 
 .press-item i {
   flex-shrink: 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: rgba(244, 241, 235, 0.3);
   transition: color 0.3s, transform 0.3s;
 }
@@ -584,7 +584,7 @@ a {
 }
 
 .psych-right p {
-  font-size: 0.96rem;
+  font-size: 1rem;
   color: rgba(244, 241, 235, 0.65);
   font-weight: 300;
   line-height: 1.75;
@@ -648,7 +648,7 @@ a {
   background: var(--c-gold-glow);
   color: var(--c-gold);
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 2px;
 }
 
@@ -712,7 +712,7 @@ a {
 }
 
 .cta-sub {
-  font-size: 0.97rem;
+  font-size: 1rem;
   color: rgba(244, 241, 235, 0.6);
   font-weight: 300;
   line-height: 1.7;
